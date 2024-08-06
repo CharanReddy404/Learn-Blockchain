@@ -13,7 +13,7 @@ export class BlockchainService {
   createBlock(proof: number, previousHash: string) {
     const block = {
       index: this.chain.length + 1,
-      timestamp: dayjs().toString(),
+      timestamp: dayjs().toISOString(),
       proof,
       previous_hash: previousHash,
     };
